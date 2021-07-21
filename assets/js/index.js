@@ -24,7 +24,7 @@ function getUserInfo() {
 
         success: function(res) {
             // console.log(localStorage.getItem('token' || ''));
-            console.log(res);
+            // console.log(res);
             if (res.status !== 0) {
                 return layer.msg('获取信息失败!')
             }
@@ -51,7 +51,7 @@ function renderAvatar(user) {
         // 设置头像 
     if (user.user_pic !== null) {
         // 渲染自定义头像
-        $('.layui-nav-img').sttr('src', user.user_pic).show();
+        $('.layui-nav-img').attr('src', user.user_pic).show();
         $('.text-avatar').hide();
     } else {
         // 渲染文字头像

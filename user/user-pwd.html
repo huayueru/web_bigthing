@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 导入layui的样式 -->
+    <link rel="stylesheet" href="/bigthing/assets/lib/layui/css/layui.css" />
+    <!-- 导入自己的样式 -->
+    <link rel="stylesheet" href="/bigthing/assets/css/user/user-pwd.css" />
+</head>
+
+<body>
+    <!-- layui的卡片模块 -->
+    <div class="layui-card">
+        <div class="layui-card-header">修改密码</div>
+        <div class="layui-card-body">
+            <!-- 导入表单 -->
+            <form class="layui-form" id="resetPwd">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">原密码</label>
+                    <div class="layui-input-block">
+                        <input type="password" name="oldPwd" required lay-verify="required|pwd" placeholder="请输入原密码" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">新密码</label>
+                    <div class="layui-input-block">
+                        <input type="password" name="newPwd" required lay-verify="required|pwd|samePwd" placeholder="请输入新密码" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">确认密码</label>
+                    <div class="layui-input-block">
+                        <input type="password" name="renewpwd" required lay-verify="required|rePwd" placeholder="请输入确认密码" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+                        <button class="layui-btn layui-btn-primary" id="btnReset">重置</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- 导入layui js -->
+    <script src="/bigthing/assets/lib/layui/layui.all.js"></script>
+
+    <!-- 导入 jQuery js -->
+    <script src="/bigthing/assets/lib/jquery.js"></script>
+    <script src="/bigthing/assets/js/baseAPI.js"></script>
+    <!-- 导入自己的js -->
+    <script src="/bigthing/assets/js/user/user-pwd.js"></script>
+</body>
+
+</html>
