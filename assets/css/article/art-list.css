@@ -1,0 +1,23 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 15px;
+    background-color: #eee;
+}
+
+.sel-title {
+    margin-right: -1px;
+    padding: 8px 14px;
+    border: 1px solid #e6e6e6;
+    border-right: 1px solid #FBFBFB;
+    background-color: #FBFBFB;
+    text-align: center;
+}
+
+.layui-btn-primary {
+    margin-left: 0;
+}
